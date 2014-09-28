@@ -10,31 +10,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
         <style>
             body {
                 padding-top: 50px;
                 padding-bottom: 20px;
             }
         </style>
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-theme.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+       
     </head>
     <body class = "body">
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+         <div class="jumbotron">
       <div class="container">
       </div>
       <div class ="title" align="center">
-	<h1>iupiBooks Login</h1>
-	</div>
+  <h1>iupiBooks Login</h1>
+  </div>
     <div class="login" align="center">
       <form method="post" action="index.html">
         <p style="margin-top:20px;"><input type="text" name="login" value="" placeholder="Username or Email"></p>
@@ -51,16 +45,16 @@
    </div>
 
       <footer class= "footer" >
-	<div class= "copyright">
+  <div class= "copyright">
         <p>&copy; Team Git Gud 2014</p>
-	</div>
+  </div>
       </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="{{ url_for('js', filename='vendor/bootstrap.min.js') }}"></script>
 
-        <script src="js/main.js"></script>
+        <script src="{{ url_for('js', filename='main.js') }}"></script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -72,6 +66,7 @@
             ga('create','UA-XXXXX-X');ga('send','pageview');
         </script>
     </body>
+
 <style>
 .login{
 margin-left: auto;
@@ -108,3 +103,4 @@ font-family: Impact;
 
 </style>
 </html>
+
